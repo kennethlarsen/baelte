@@ -1,0 +1,9 @@
+[package]
+name = "baelte"
+version = "0.1.0"
+authors = ["Kenneth Larsen <hello@kennethlarsen.org>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.26.0"
+fs_extra = "1.1.0"

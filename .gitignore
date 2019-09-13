@@ -1,0 +1,5 @@
+/target
+**/*.rs.bk
+
+svelte-test/
+docs/node_modules

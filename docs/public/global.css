@@ -1,0 +1,83 @@
+:root {
+  font-family: 'IBM Plex Sans', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-medium: 2rem;
+  --font-size-biggish: 3rem;
+  --font-size-big: 4.25rem;
+  --s0: 1rem;
+  --s1: 2rem;
+  --s2: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+  color: #222;
+}
+
+code {
+  font-size: var(--font-size-base);
+}
+
+/* layout */
+.stack {
+  --space: 1.5rem;
+}
+
+.stack > * {
+  margin-top: 2rem;
+  margin-bottom: 0;
+} 
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+/* Brand styling */
+
+footer {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--font-size-biggish);
+}
+
+h1 {
+  font-size: var(--font-size-big);
+}
+
+p {
+  font-size: var(--font-size-base);
+}
+
+main {
+  border-left: 4px dotted #222;
+  padding-left: var(--s2);
+}
+
+li {
+  font-size: var(--font-size-base);
+  margin-top: var(--s0);
+}
+
+@media (max-width: 827px) {
+  nav > * {
+    display: none;
+  }
+}
+
+/* utilities */
+
+.font-size\:base {
+  font-size: var(--font-size-base) !important;
+}
+
+.font-size\:biggish {
+  font-size: var(--font-size-biggish) !important;
+}
+
+.font-size\:big {
+  font-size: var(--font-size-big) !important;
+}
