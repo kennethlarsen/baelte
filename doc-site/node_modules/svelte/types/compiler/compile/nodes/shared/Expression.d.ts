@@ -1,0 +1,30 @@
+import Component from '../../Component';
+import { Scope } from '../../utils/scope';
+import { Node } from '../../../interfaces';
+import Wrapper from '../../render_dom/wrappers/shared/Wrapper';
+import TemplateScope from './TemplateScope';
+import Block from '../../render_dom/Block';
+import { INode } from '../interfaces';
+declare type Owner = Wrapper | INode;
+export default class Expression {
+    type: 'Expression';
+    component: Component;
+    owner: Owner;
+    node: any;
+    snippet: string;
+    references: Set<string>;
+    dependencies: Set<string>;
+    contextual_dependencies: Set<string>;
+    template_scope: TemplateScope;
+    scope: Scope;
+    scope_map: WeakMap<Node, Scope>;
+    is_synthetic: boolean;
+    declarations: string[];
+    uses_context: boolean;
+    rendered: string;
+    constructor(component: Component, owner: Owner, template_scope: TemplateScope, info: any, lazy?: boolean);
+    dynamic_dependencies(): string[];
+    get_precedence(): number;
+    render(block?: Block): string;
+}
+export {};

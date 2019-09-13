@@ -7,7 +7,11 @@ CLI tool for svelte that helps you be productive.
 * 🚀 Scaffold new projects in seconds
 * 📦 Generate components and tests with one command
 
-`brew install baelte`
+Install:
+```zsh
+curl -LSfs https://japaric.github.io/trust/install.sh | \
+    sh -s -- --git kennethlarsen/baelte
+```
 
 `baelte new project-name`
 
