@@ -9,8 +9,7 @@ CLI tool for svelte that helps you be productive.
 
 Install:
 ```zsh
-curl -LSfs https://japaric.github.io/trust/install.sh | \
-    sh -s -- --git kennethlarsen/baelte
+npm install -g baelte
 ```
 
 `baelte new project-name`
